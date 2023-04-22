@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../common/Buttons/Button";
 import Typography from "../common/Typography";
-import { skills } from "../data/Skills";
+import { skills } from "../data/skills";
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
       className="bg-[#fafafa] pt-14 md:py-24 px-5  w-full md:flex md:justify-center"
       id="about"
     >
-      <div className="w-full md:w-[100%] lg:w-[90%] xl:w-[80%] 2xl:w-[80vh]">
+      <div className="w-full md:w-[100%] lg:w-[90%] xl:w-[80%] 2xl:w-[120vh]">
         <div className="text-center ">
           <Typography variant="h2" className="animate-character">
             ABOUT ME

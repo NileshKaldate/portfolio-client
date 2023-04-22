@@ -12,12 +12,12 @@ const Home = () => {
       <Navbar />
       <div className="relative h-full">
         <div className="bg-black h-full flex justify-center items-center bg-[url(./assets/bgImage.jpeg)] opacity-30"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full md:w-[86%] lg:w-[73%] xl:w-[60%] 2xl:w-[50vh] max-md:px-4 ">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full md:w-[86%] lg:w-[73%] xl:w-[60%] 2xl:w-[90vh] max-md:px-4 ">
           <Typography
             variant="h1"
             className="max-md:flex max-md:flex-col max-md:gap-2"
-          >
-            <span>HELLO 👋 I'M </span>
+          >   
+            <span>HELLO 👋 I     'M </span>
             <span className="typewriter" id="heading">
               NILESH KALDATE
             </span>
