@@ -13,8 +13,30 @@ const Footer = () => {
               to the success of the overall product
             </p>
           </div>
-          <div className="max-md:w-full max-md:py-12 max-md:text-center">
+          <div className="max-md:w-full max-md:py-12 max-md:text-center relative">
             <h1 className="font-semibold text-xl">SOCIALS</h1>
+            <div class="social-menu">
+              <ul>
+                <li>
+                  <a href="https://github.com/sanketbodke" target="blank">
+                    {/* <i class="fab fa-github"></i> */}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/sanket-bodake-995b5b205/"
+                    target="blank"
+                  >
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/49/49068.png"
+                      style={{ objectFit: "cover" }}
+                    />
+                    {/* <i class="fab fa-linkedin-in"></i> */}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="border-[0.2px] border-white md:mt-20"></div>

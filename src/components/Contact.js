@@ -40,7 +40,7 @@ const Contact = ({ setOpen }) => {
       className="relative max-md:px-5 max-w-full bg-[#fafafa] md:flex md:justify-center"
       id="contact"
     >
-      <div className="py-14 md:py-24 w-full relative md:w-[70%] lg:w-[65%] xl:w-[55%] 2xl:w-[70vh]">
+      <div className="py-20 md:py-24 w-full relative md:w-[70%] lg:w-[65%] xl:w-[55%] 2xl:w-[70vh]">
         <div className="flex justify-center">
           <Typography variant="h2" className="animate-character">
             CONTACT

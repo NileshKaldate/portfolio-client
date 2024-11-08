@@ -1,3 +1,4 @@
+import { Fade as Hamburger } from "hamburger-react";
 import React, { useState } from "react";
 import DownloadButton from "../common/Buttons/DownloadButton";
 import Typography from "../common/Typography";
@@ -7,12 +8,25 @@ const Navbar = () => {
   const height = "h-16 sm:h-16 md:h-20 lg:h-24 2xl:h-28";
   const listGap = "gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 2xl:gap-20";
   const padding = "px-5 sm:px-6 md:px-7 lg:px-8 xl:px-9 2xl:px-10";
-  const transitions = `${
-    isChecked &&
-    "transition ease-in-out  before:origin-top-left before:rotate-45 before:duration-500 before:delay-300 before:absolute before:top-[22px] before:w-[25px] after:absolute after:origin-bottom-left after:-rotate-45 after:duration-500 after:delay-300 after:top-[39px] after:w-[25px] "
-  }`;
-  const handleChange = () => {
-    setIsChecked(!isChecked);
+
+  const handleNavClick = () => {
+    setIsChecked(false);
+  };
+
+  const handleDownload = () => {
+    fetch(
+      "https://dc-sync.s3.eu-north-1.amazonaws.com/NileshKaldateCV.pdf"
+    ).then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Nilesh_Kaldate_CV.pdf";
+        alink.click();
+      });
+    });
   };
   return (
     <div className={`z-10 fixed bg-white w-full ${isChecked && "shadow-2xl"}`}>
@@ -24,10 +38,7 @@ const Navbar = () => {
         <Typography variant="h3">NILESH KALDATE</Typography>
         <ul className={`flex capitalize items-center max-md:hidden ${listGap}`}>
           <li>
-            <DownloadButton
-              label={"CV"}
-              link={"https://filetransfer.io/data-package/hJGhMxue/download"}
-            />
+            <DownloadButton label={"CV"} onClick={handleDownload} />
           </li>
           <li>
             <a href="#home">HOME</a>
@@ -42,31 +53,24 @@ const Navbar = () => {
             <a href="#contact">CONTACT</a>
           </li>
         </ul>
-        <button
-          onClick={() => {
-            document.getElementById("input")?.click();
-          }}
-          className="cursor-pointer md:hidden"
-        >
-          <label
-            className={` before:bg-black flex flex-col before:h-0.5 before:w-6  after:bg-black  after:h-0.5 after:w-6 gap-1 before:rounded-full after:rounded-full md:hidden ${transitions}`}
-          >
-            <input
-              type="checkbox"
-              className="bg-black w-6 h-0.5 flex flex-col appearance-none rounded-full outline-none pointer-events-none transition-opacity checked:opacity-0 duration-500 input"
-              onClick={handleChange}
-            />
-          </label>
-        </button>
+        <div className="md:hidden absolute right-0">
+          <Hamburger
+            toggle={setIsChecked}
+            toggled={isChecked}
+            size={18}
+            hideOutline={false}
+            rounded
+            easing="ease-in"
+          />
+        </div>
       </nav>
       {isChecked && (
         <div className=" w-full bg-white md:hidden font-bold ">
           <button
             className="flex w-full justify-end py-4 border-t  px-7 animate-left"
             onClick={() => {
-              window.location.href =
-                "https://filetransfer.io/data-package/hJGhMxue/download";
-              isChecked(!isChecked);
+              handleDownload();
+              handleNavClick();
             }}
           >
             <DownloadButton label="cv" link="" />
@@ -74,36 +78,28 @@ const Navbar = () => {
 
           <button
             className="flex w-full justify-end py-4 border-t  px-7 "
-            onClick={() => {
-              isChecked(!isChecked);
-            }}
+            onClick={handleNavClick}
           >
             <a href="#home">Home</a>
           </button>
 
           <button
             className="flex w-full justify-end py-4 border-t  px-7 "
-            onClick={() => {
-              isChecked(!isChecked);
-            }}
+            onClick={handleNavClick}
           >
             <a href="#about">ABOUT</a>
           </button>
 
           <button
             className="flex w-full justify-end py-4 border-t  px-7 "
-            onClick={() => {
-              isChecked(!isChecked);
-            }}
+            onClick={handleNavClick}
           >
             <a href="#projects">PROJECTS</a>
           </button>
 
           <button
             className="flex w-full justify-end py-4 border-t  px-7 "
-            onClick={() => {
-              isChecked(!isChecked);
-            }}
+            onClick={handleNavClick}
           >
             <a href="#contact">CONTACT</a>
           </button>

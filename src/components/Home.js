@@ -16,8 +16,8 @@ const Home = () => {
           <Typography
             variant="h1"
             className="max-md:flex max-md:flex-col max-md:gap-2"
-          >   
-            <span>HELLO 👋 I     'M </span>
+          >
+            <span>HELLO 👋 I 'M </span>
             <span className="typewriter" id="heading">
               NILESH KALDATE
             </span>
@@ -30,7 +30,9 @@ const Home = () => {
             </Typography>
           </div>
           <div className="mt-10">
-            <Button label="PROJECTS" />
+            <a href="#projects">
+              <Button label="PROJECTS" />
+            </a>
           </div>
         </div>
       </div>

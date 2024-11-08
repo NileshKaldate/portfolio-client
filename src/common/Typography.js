@@ -12,11 +12,11 @@ const tags = {
 };
 
 const sizes = {
-  h1: "text-3xl font-black sm:text-5xl",
-  h2: "text-2xl font-bold sm:text-3xl",
-  h3: "text-xl font-bold md:text-base lg:text-lg xl:text-xl 2xl:text-2xl",
-  h4: "text-base font-bold sm:text-lg",
-  h5: "text-md font-light sm:text-base",
+  h1: " font-black text-3xl sm:text-5xl",
+  h2: "font-bold text-2xl  sm:text-3xl",
+  h3: " font-bold text-base lg:text-lg xl:text-xl 2xl:text-2xl",
+  h4: "font-bold text-base sm:text-lg",
+  h5: "font-light text-md sm:text-base",
   body: "text-sm sm:text-md",
   "body-small": "text-xs sm:text-sm",
   small: "text-xs sm:text-xs",

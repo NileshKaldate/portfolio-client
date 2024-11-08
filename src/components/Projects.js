@@ -4,7 +4,7 @@ import Typography from "../common/Typography";
 const Projects = () => {
   return (
     <div
-      className="py-16 md:py-28 w-full flex justify-center items-center"
+      className="py-20 md:py-28 w-full flex justify-center items-center"
       id="projects"
     >
       <div className="w-full md:w-[86%] lg:w-[80%] xl:w-[60%] 2xl:w-[90vh] max-md:px-4 flex flex-col justify-center items-center">

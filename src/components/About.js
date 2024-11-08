@@ -6,7 +6,7 @@ import { skills } from "../data/skills";
 const About = () => {
   return (
     <div
-      className="bg-[#fafafa] pt-14 md:py-24 px-5  w-full md:flex md:justify-center"
+      className="bg-[#fafafa] pt-20 md:py-24 px-5  w-full md:flex md:justify-center"
       id="about"
     >
       <div className="w-full md:w-[100%] lg:w-[90%] xl:w-[80%] 2xl:w-[120vh]">
@@ -46,7 +46,9 @@ const About = () => {
               </Typography>
             </div>
             <div>
-              <Button label="CONTACT" className="md:px-4 md:py-2" />
+              <a href="#contact">
+                <Button label="CONTACT" className="md:px-4 md:py-2" />
+              </a>
             </div>
           </div>
           <div className=" md:w-1/2 max-md:py-14">
